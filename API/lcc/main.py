@@ -7,7 +7,6 @@ def predict_image_class(image_data):
 
     model = load_model("lcc/keras_Model.h5", compile=False)
 
-    # Load the labels
     class_names = open("labels.txt", "r").readlines()
 
     # Create the array of the right shape to feed into the keras model
