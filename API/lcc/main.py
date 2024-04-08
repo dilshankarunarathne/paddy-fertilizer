@@ -18,7 +18,6 @@ def predict_image_class(image_data):
 
     image_array = np.asarray(image)
 
-    # Normalize the image
     normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
 
     # Load the image into the array
