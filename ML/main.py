@@ -40,3 +40,5 @@ def predict_image_class(image_data):
     return class_name[2:], confidence_score
 
 
+def estimate_npa(lcc_score):
+    pass
