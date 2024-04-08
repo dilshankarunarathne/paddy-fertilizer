@@ -5,7 +5,6 @@ def predict_image_class(image_data):
 
     np.set_printoptions(suppress=True)
 
-    # Load the model
     model = load_model("lcc/keras_Model.h5", compile=False)
 
     # Load the labels
