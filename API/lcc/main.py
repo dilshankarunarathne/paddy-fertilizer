@@ -16,7 +16,6 @@ def predict_image_class(image_data):
     size = (224, 224)
     image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
 
-    # Turn the image into a numpy array
     image_array = np.asarray(image)
 
     # Normalize the image
