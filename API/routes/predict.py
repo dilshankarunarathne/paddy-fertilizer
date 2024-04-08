@@ -1,4 +1,8 @@
 from fastapi import APIRouter, UploadFile, File
+from PIL import Image
+import numpy as np
+from io import BytesIO
+from lcc.main import predict_image_class
 
 router = APIRouter(
     prefix="/api/predict",
@@ -8,9 +12,7 @@ router = APIRouter(
 
 
 @router.post("/")
-async def predict_image_class(
-        image: UploadFile = File(...)
-):
+async def predict_image(image: UploadFile = File(...)):
     """
     The endpoint for predicting the class of an image
 
@@ -22,6 +24,14 @@ async def predict_image_class(
         (str) The confidence score
         (str) The estimated Nitrogen requirement per Acre
     """
+    # Read the image file
+    image_data = await image.read()
 
+    # Convert the image data bytes to a numpy array
+    image = Image.open(BytesIO(image_data))
+    image_array = np.array(image)
 
-    pass
+    # Call the predict_image_class method with the numpy array
+    class_name, confidence_score = predict_image_class(image_array)
+
+    return {"class_name": class_name, "confidence_score": confidence_score}
