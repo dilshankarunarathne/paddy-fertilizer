@@ -43,4 +43,4 @@ async def predict_image(image: UploadFile = File(...)):
     # Estimate npa
     npa_estimate = estimate_npa(class_name)
 
-    return {"class_name": class_name, "confidence_score": confidence_score, "npa_estimate": npa_estimate}
+    return {"lcc": class_name, "confidence_score": confidence_score, "npa_estimate": npa_estimate}
