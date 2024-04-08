@@ -22,7 +22,6 @@ def predict_image_class(image_data):
 
     data[0] = normalized_image_array
 
-    # Predicts the model
     prediction = model.predict(data)
     index = np.argmax(prediction)
     class_name = class_names[index]
