@@ -11,7 +11,6 @@ def predict_image_class(image_data):
 
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-    # Convert image data to PIL Image
     image = Image.fromarray(image_data).convert("RGB")
 
     # Resize the image to be at least 224x224 and then crop from the center
