@@ -15,9 +15,11 @@ async def predict_image_class(
     The endpoint for predicting the class of an image
 
     Args:
-        image_data (UploadFile): the image to predict
+        image (UploadFile): the image to predict
 
     Returns:
         (str) The class of the image
+        (str) The confidence score
+        (str) The estimated Nitrogen requirement per Acre
     """
     return {"class": "Class", "confidence": 0.0}
