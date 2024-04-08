@@ -33,7 +33,7 @@ def predict_image_class(image_data):
 def estimate_npa(lcc_score):
     npa_values = {
         "Level 04": 9.0,
-        "Level 05": 10.5,
+        "Level 05": 0.5,
         "Level 03": 7.5,
         "Level 02": 6.0
     }
