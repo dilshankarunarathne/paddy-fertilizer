@@ -7,7 +7,7 @@ def predict_image_class(image_data):
 
     model = load_model("lcc/keras_Model.h5", compile=False)
 
-    class_names = open("labels.txt", "r").readlines()
+    class_names = open("lcc/labels.txt", "r").readlines()
 
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
