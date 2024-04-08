@@ -3,7 +3,6 @@ def predict_image_class(image_data):
     import numpy as np
     from PIL import Image, ImageOps
 
-    # Disable scientific notation for clarity
     np.set_printoptions(suppress=True)
 
     # Load the model
