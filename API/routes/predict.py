@@ -24,4 +24,4 @@ async def predict_image_class(
     """
 
 
-    pass 
+    pass
