@@ -13,7 +13,6 @@ def predict_image_class(image_data):
 
     image = Image.fromarray(image_data).convert("RGB")
 
-    # Resize the image to be at least 224x224 and then crop from the center
     size = (224, 224)
     image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
 
