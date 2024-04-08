@@ -154,3 +154,5 @@ cython_debug/
 #.idea/
 ML/converted_keras.zip
 ML/project.tm
+ML/keras_model.h5
+ML/labels.txt
