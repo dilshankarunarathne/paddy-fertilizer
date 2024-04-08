@@ -9,7 +9,6 @@ def predict_image_class(image_data):
 
     class_names = open("labels.txt", "r").readlines()
 
-    # Create the array of the right shape to feed into the keras model
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
     # Convert image data to PIL Image
