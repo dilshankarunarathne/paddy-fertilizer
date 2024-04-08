@@ -22,4 +22,6 @@ async def predict_image_class(
         (str) The confidence score
         (str) The estimated Nitrogen requirement per Acre
     """
-    return {"class": "Class", "confidence": 0.0}
+
+
+    pass 
